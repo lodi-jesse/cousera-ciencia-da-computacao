@@ -1,14 +1,14 @@
 import math
 
 
-def é_hipotenusa(n):
+def hipotenusa(n):
     i = 1
     while i <= n:
         j = 1
         while j <= n:
             a = i
             b = j
-            c = int(math.sqrt((a ** 2) + (b ** 2)))
+            c = int(math.hypot(a, b))
             if (c > a) and (c > b) and (c < (a + b)):
                 if (a ** 2) + (b ** 2) == c ** 2:
                     if c == n:
@@ -22,7 +22,7 @@ def é_hipotenusa(n):
 def soma_hipotenusas(n):
     soma = old = 0
     for i in range(1, n + 1):
-        result = é_hipotenusa(i)
+        result = hipotenusa(i)
         if result > old:
             old = result
             soma = soma + result
