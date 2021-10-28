@@ -27,7 +27,7 @@ def soma_hipotenusas(n):
             old = result
             soma = soma + result
 
-    return print(soma)
+    return soma
 
 
 soma_hipotenusas(n=int(input("Digite um número: ")))

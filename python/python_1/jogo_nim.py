@@ -1,8 +1,4 @@
 def computador_escolhe_jogada(n, m):
-    # Vez do computador:
-    print("Computador começa!")
-    print()
-
     # Pode retirar todas as peças?
     if n <= m:
 
@@ -22,9 +18,6 @@ def computador_escolhe_jogada(n, m):
 
 
 def usuario_escolhe_jogada(n, m):
-    # Vez do usuário:
-    print("Você começa!\n")
-
     # Define o número de peças do usuário:
     jogada = 0
 
@@ -54,11 +47,16 @@ def partida():
     m = int(input("Limite de peças por jogada? "))
 
     # Define uma variável para controlar a vez do computador:
-    is_computer_turn = True
+    is_computer_turn = False
 
     # Decide quem iniciará o jogo:
     if n % (m+1) == 0:
-        is_computer_turn = False
+        print()
+        print("Você começa!")
+    else:
+        print()
+        print("Computador começa!")
+        is_computer_turn = True
 
     # Execute enquanto houver peças no jogo:
     while n > 0:
