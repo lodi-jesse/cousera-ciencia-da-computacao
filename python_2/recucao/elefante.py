@@ -8,7 +8,3 @@ def incomodam(n):
     if n <= 0: return ""
     if n == 1: return "incomodam "
     return "incomodam " + incomodam(n - 1)
-
-n = 4
-
-print(elefantes(n=n))
